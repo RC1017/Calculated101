@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-gaming-bg: #020617;
+  --color-gaming-card: #0f172a;
+  --color-gaming-accent: #3b82f6;
+  --color-gaming-accent-hover: #60a5fa;
+}
+
+@layer base {
+  body {
+    @apply bg-gaming-bg text-white antialiased;
+  }
+}
+
+.glass-effect {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.game-card-hover {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-gaming-accent/20;
+}

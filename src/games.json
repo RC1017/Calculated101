@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Basket Random",
+    "description": "A fun and chaotic two-player basketball game with random physics!",
+    "thumbnail": "https://play-lh.googleusercontent.com/6AN9KKe5M9udzoQA1J00dc6po5dNY9JInI_ewDKcPXocPjEHWTqJV0d2CwSWxYRhTh4=w526-h296-rw",
+    "iframeUrl": "https://www.twoplayergames.org/gameframe/basket-random"
+  },
+  {
+    "id": "2",
+    "title": "Tag",
+    "description": "A fast-paced multiplayer game of tag. Run, jump, and tag your friends!",
+    "thumbnail": "https://taggame.io/data/image/options/tag-game-banner-tgio.png",
+    "iframeUrl": "https://quiz-50.github.io/action-games/tag/"
+  },
+  {
+    "id": "3",
+    "title": "Drive Mad",
+    "description": "A challenging driving game where you must navigate through various obstacles and terrains.",
+    "thumbnail": "https://img-cdn.heygame.io/gameimages/ea280006-62fc-4939-9af4-2f18f068bb69-Drive-Mad.png",
+    "iframeUrl": "https://quiz-50.github.io/driving-games/drive-mad/"
+  },
+  {
+    "id": "4",
+    "title": "Retro Bowl",
+    "description": "The perfect game for the armchair quarterback to finally prove a point.",
+    "thumbnail": "https://play-lh.googleusercontent.com/WRM5Y1xZmzcCP1YtO5zl6G2g7CU5c5ZfjX4UVrgi1bpNgkfy-wuB-bQx3kkeRfaGYQ=w600-h300-pc0xffffff-pd",
+    "iframeUrl": "https://quiz-50.github.io/driving-games/retro-bowl/"
+  },
+  {
+    "id": "5",
+    "title": "BitLife",
+    "description": "A life simulator game where you make choices that determine your character's life story.",
+    "thumbnail": "https://play-lh.googleusercontent.com/fUM-UyywXxjC8soxAZdIlxJrlRRXmql8wkE426SHzft4lJycSKVd2jCYQQX1BEG9Xw",
+    "iframeUrl": "https://quiz-50.github.io/strategy-games/bitlife/"
+  }
+]
