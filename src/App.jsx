@@ -2,13 +2,12 @@ import { useState, useMemo, useRef, useEffect } from 'react';
 import { Search, Gamepad2, X, Maximize2, ExternalLink, Info } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import gamesData from './games.json';
-import { Game } from './types';
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+  const [selectedGame, setSelectedGame] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     const handleFullscreenChange = () => {
@@ -33,7 +32,7 @@ export default function App() {
           await document.exitFullscreen();
         }
       }
-    } catch (err: any) {
+    } catch (err) {
       // Ignore "Pending operation cancelled" errors as they are benign
       if (err.message?.includes('Pending operation cancelled')) {
         return;
@@ -45,13 +44,13 @@ export default function App() {
   };
 
   const filteredGames = useMemo(() => {
-    return (gamesData as Game[]).filter(game =>
+    return gamesData.filter(game =>
       game.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       game.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery]);
 
-  const handleGameSelect = (game: Game) => {
+  const handleGameSelect = (game) => {
     setSelectedGame(game);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -222,12 +221,7 @@ export default function App() {
   );
 }
 
-interface GameCardProps {
-  game: Game;
-  onClick: () => void;
-}
-
-function GameCard({ game, onClick }: GameCardProps) {
+function GameCard({ game, onClick }) {
   return (
     <motion.div
       layout
